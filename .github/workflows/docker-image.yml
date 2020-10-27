@@ -1,0 +1,29 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ master ]
+
+  pull_request:
+    branches: [ master ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Login to Docker Hub
+      uses: docker/login-action@v1
+      with:
+        username: jweatherby
+        password: 7b14a1bc-755d-4534-8f7d-26e5c9732e49
+
+    - name: Build the Docker image
+      run: docker build . -t points/interview-test-server:latest
+
+    - name: Publish the docker image
+      run: docker push points/interview-test-server:latest
