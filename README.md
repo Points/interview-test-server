@@ -55,7 +55,9 @@ Please timebox your solution to one day total.
 
 * Create a simple, yet visually appealing and responsive design.
 * Target the latest stable version of Google Chrome.
+* Format the code according to the latest eslint specs
 
 **If using Python**
 
 * Implement a simple yet intuitive command line interface.
+* Format the code following PEP8 guidelines
