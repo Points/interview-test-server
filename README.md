@@ -32,8 +32,8 @@ _Warning: this endpoint has gotchas_
 ## Getting started
 
 ```bash
-docker pull points/interview-test-server
-docker run --init -p 5000:5000 -it points/interview-test-server
+docker pull ptsdocker16/interview-test-server
+docker run --init -p 5000:5000 -it ptsdocker16/interview-test-server
 ```
 
 Navigate to http://localhost:5000. You should see a brief set of instructions. From there you'll be able to query the above endpoints and do your assignments. If you have any problems, email the Team Lead or Engineering Hiring Manager for assistance.
