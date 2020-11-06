@@ -23,7 +23,7 @@ jobs:
         password: $DOCKER_TOKEN
 
     - name: Build the Docker image
-      run: docker build . -t points/interview-test-server:latest
+      run: docker build . -t ptsdocker16/interview-test-server:latest
 
     - name: Publish the docker image
-      run: docker push points/interview-test-server:latest
+      run: docker push ptsdocker16/interview-test-server:latest
