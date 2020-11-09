@@ -35,7 +35,7 @@ Navigate to http://localhost:5000. You should see a brief set of instructions. F
 
 ## Submission Instructions
 
-You can either add this code to a personal repoository or submit it as a zip file. You are then to submit your solution to your contact at Points. Please submit within a week or 2 of receipt of instructions.
+You can either submit your code as a zip file or send a link to a personal repository. Do not fork or submit pull requests to this repository. Please submit within a week or 2 of receipt of instructions, unless otherwise specified.
 
 Please *do not fork or submit pull requests* to this repository.
 
