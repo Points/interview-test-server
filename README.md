@@ -1,6 +1,6 @@
 # Interview Test Server
 
-For the Points developer take-home assignment, the following task is required. You are to build a tax calculator against this API. The purpose is to build an income tax calculator to help illustrate how marginal taxes work. This server is pretty simple, only returning the tax rates for a given year. You are to calculate the amount of taxes owed by inputting a yearly salary, then displaying the different rates, the total amount owed and the effective tax rates.
+For the Points developer take-home assignment, the following task is required: you are to build a tax calculator against this API. The purpose is to develop an income tax calculator to help illustrate how marginal taxes work. This server is pretty simple, only returning the tax rates for a given year. You are to calculate the amount of taxes owed by inputting a yearly salary, then displaying the different rates, the total amount owed and the effective tax rates.
 
 ## Instructions
 
@@ -23,11 +23,6 @@ There are different levels to this assignment, level 1 being the easiest, level 
 * Fetch the tax rates by year: http://localhost:5000/tax-calculator/brackets/<2019|2020|...>
 
 _Warning: this endpoint has gotchas_
-
-### Level 3
-
-* TBD
-
 
 ## Getting started
 
