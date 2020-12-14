@@ -3,11 +3,7 @@ import json
 from flask import jsonify
 
 
-brackets_dir = os.path.join(
-    os.path.dirname(__file__),
-    '..',
-    'static-data',
-)
+brackets_dir = os.path.join(os.path.dirname(__file__), 'fixtures')
 
 
 def _open_config(filename):
