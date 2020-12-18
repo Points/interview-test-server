@@ -1,2 +1,4 @@
 *.swp
 *.un~
+*idea/
+*__pycache__/

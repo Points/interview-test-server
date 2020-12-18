@@ -2,7 +2,9 @@
 
 For the Points developer take-home assignment, the following task is required: you are to build a tax calculator against this API. The purpose is to develop an income tax calculator to help illustrate how marginal taxes work. This server is pretty simple, only returning the tax rates for a given year. You are to calculate the amount of taxes owed by inputting a yearly salary, then displaying the different rates, the total amount owed and the effective tax rates.
 
-## Instructions
+## Assignment 1: Tax Calculator
+
+### Instructions
 
 * Download and run this server (see [Getting Started](#getting-started))
 * Build an application / tool in React or Python with the following criteria:
@@ -11,8 +13,7 @@ For the Points developer take-home assignment, the following task is required: y
     * Calculates and displays the total taxes owed for the salary
     * Displays the amount of taxes owed per band
     * Displays the effective rate
-
-There are different levels to this assignment, level 1 being the easiest, level 2 having some gotchas, etc. If you complete a level with ease, feel free to jump to the next one. Please timebox your solution to one day total.
+* There are different levels to this assignment, level 1 being the easiest, level 2 having some gotchas, etc. If you complete a level with ease, feel free to jump to the next one. Please timebox your solution to one day total.
 
 ### Level 1
 
@@ -23,6 +24,29 @@ There are different levels to this assignment, level 1 being the easiest, level 
 * Fetch the tax rates by year: http://localhost:5000/tax-calculator/brackets/<2019|2020|...>
 
 _Warning: this endpoint has gotchas_
+
+## Assignment 2: Autonomous Car
+
+### Instructions
+
+* Download and run this server (see [Getting Started](#getting-started))
+* Build an application / tool in React or Python with the following criteria:
+    * Fetches the a autonomous car route from this API server
+    * Takes a set of instructions as input
+    * Determine's if the route was a success or a failure
+    * If it was a failure, determine at which step or position that failed
+* There are different levels to this assignment, level 1 being the easiest, level 2 having some gotchas, etc. If you complete a level with ease, feel free to jump to the next one. Please timebox your solution to one day total.
+
+### Level 1
+
+* Fetch the tax rates from this server at: http://localhost:5000/autonomous-car/routes/
+
+### Level 2
+
+* Fetch the tax rates by year: http://localhost:5000/autonomous-car/routes/<success|failure|empty...>
+
+_Warning: this endpoint has gotchas_
+
 
 ## Getting started
 
