@@ -17,11 +17,11 @@ For the Points developer take-home assignment, the following task is required: y
 
 ### Level 1
 
-* Fetch the tax rates from this server at: http://localhost:5000/tax-calculator/brackets
+* Fetch the tax rates from this server at: [localhost:5000/tax-calculator/brackets](http://localhost:5000/tax-calculator/brackets)
 
 ### Level 2
 
-* Fetch the tax rates by year: http://localhost:5000/tax-calculator/brackets/<2019|2020|...>
+* Fetch the tax rates by year: [localhost:5000/tax-calculator/brackets/<2019,2020...>](http://localhost:5000/tax-calculator/brackets/2020)
 
 _Warning: this endpoint has gotchas_
 
@@ -39,11 +39,11 @@ _Warning: this endpoint has gotchas_
 
 ### Level 1
 
-* Fetch the tax rates from this server at: http://localhost:5000/autonomous-car/routes/
+* Fetch a random autonomous car route from this server at: [localhost:5000/autonomous-car/routes/](http://localhost:5000/autonomous-car/routes/)
 
 ### Level 2
 
-* Fetch the tax rates by year: http://localhost:5000/autonomous-car/routes/<success|failure|empty...>
+* Fetch an autonomous car route by status: [localhost:5000/autonomous-car/routes/<success|failure|empty>](http://localhost:5000/autonomous-car/routes/empty)
 
 _Warning: this endpoint has gotchas_
 

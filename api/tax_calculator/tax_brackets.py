@@ -19,6 +19,6 @@ def get_tax_brackets(tax_year=2020):
     try:
         return utils.get_json_contents_from_resource_file(file_with_path)
     except FileNotFoundError:
-        raise ValueError(
+        raise FileNotFoundError(
             f'Tax brackets for the year \'{tax_year}\' were not found.'
         )

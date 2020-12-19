@@ -11,8 +11,8 @@ STATUS_LIST = [SUCCESS_STATUS, FAILURE_STATUS, EMPTY_STATUS]
 
 CAR_ROUTES = {
     SUCCESS_STATUS: [
-        'successful_car_route_no_obsticals.json',
-        'successful_car_route_with_obstacales.json',
+        'successful_car_route_no_obstacles.json',
+        'successful_car_route_with_obstacles.json',
     ],
     FAILURE_STATUS: [
         'failure_car_route_out_of_bounds.json',
@@ -41,11 +41,7 @@ def get_random_car_route_from_status(status):
         filename = random.choice(route_list)
         file_with_path = os.path.join(ROUTE_DIRECTORY, filename)
         return utils.get_json_contents_from_resource_file(file_with_path)
-    except IndexError:
-        raise ValueError(
-            f'Invalid route status \'{route_status}\' is invalid.'
-        )
-    except FileNotFoundError:
-        raise ValueError(
+    except KeyError:
+        raise KeyError(
             f'Automated car route with status \'{route_status}\' was not found.'
         )
