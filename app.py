@@ -1,12 +1,10 @@
-import http
-
-from flask import Flask
-from flask_cors import CORS
+import flask
+import flask_cors
 
 from api.error_handlers import format_error
 
-app = Flask(__name__)
-CORS(app)
+app = flask.Flask(__name__)
+flask_cors.CORS(app)
 
 
 @app.route('/')
@@ -14,14 +12,14 @@ def instructions():
     return render_template('instructions.html')
 
 
-@app.errorhandler(http.HTTPStatus.NOT_FOUND)
+@app.errorhandler(404)
 def not_found_handler(e):
     return jsonify({
         'errors': format_error(
-            message='That url was not found.',
+            message='That url was not found',
             code='NOT_FOUND'
         )
-    }), http.HTTPStatus.NOT_FOUND
+    }), 404
 
 
 @app.errorhandler(Exception)
@@ -31,7 +29,7 @@ def exception_handler(e):
             message=str(e),
             code='INTERNAL_SERVER_ERROR'
         )
-    }), http.HTTPStatus.INTERNAL_SERVER_ERROR
+    }), 500
 
 
 from api.tax_calculator.routes import *

@@ -1,7 +1,6 @@
+import json
 import os
 import random
-
-from api import utils
 
 SUCCESS_STATUS = 'SUCCESS'
 FAILURE_STATUS = 'FAILURE'
@@ -25,23 +24,27 @@ CAR_ROUTES = {
 ROUTE_DIRECTORY = os.path.join(os.path.dirname(__file__), 'fixtures')
 
 
-def get_empty_route():
-    return CAR_ROUTES[EMPTY_STATUS]
+def _open_config(filename):
+
+    with open(filename) as config_file:
+        json_contents = json.load(config_file)
+
+    return json_contents
 
 
-def get_random_route():
-    random_status = random.choice(STATUS_LIST)
-    return get_random_car_route_from_status(random_status)
-
-
-def get_random_car_route_from_status(status):
+def get_car_route(status):
     route_status = status.upper()
     try:
         route_list = CAR_ROUTES[route_status]
         filename = random.choice(route_list)
         file_with_path = os.path.join(ROUTE_DIRECTORY, filename)
-        return utils.get_json_contents_from_resource_file(file_with_path)
+        return _open_config(file_with_path)
     except KeyError:
         raise KeyError(
             f'Automated car route with status \'{route_status}\' was not found.'
         )
+
+
+def get_random_route():
+    random_status = random.choice(STATUS_LIST)
+    return get_car_route(random_status)

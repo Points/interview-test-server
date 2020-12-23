@@ -5,7 +5,6 @@ from flask import jsonify
 from flask import render_template
 
 from api.autonomous_car import controllers
-from api.autonomous_car import autonomous_car
 from app import app
 
 
@@ -17,14 +16,14 @@ def automated_car_instructions():
 @app.route('/autonomous-car/routes/')
 def random_automated_car_route():
     return jsonify({
-        'car_route': controllers.get_random_car_route()
+        'car_route': controllers.get_reliable_car_route()
     })
 
 
 @app.route('/autonomous-car/routes/<string:status>/')
-def get_automated_car_route(status):
-    if status.upper() not in autonomous_car.STATUS_LIST:
+def automated_car_route(status):
+    if not controllers.is_valid_status(status):
         abort(http.HTTPStatus.NOT_FOUND)
     return jsonify({
-        'car_route': autonomous_car.get_random_car_route_from_status(status)
+        'car_route': controllers.get_unreliable_car_route(status)
     })

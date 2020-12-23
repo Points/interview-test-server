@@ -1,16 +1,23 @@
-from api import utils
+import random
+
 from api.autonomous_car import autonomous_car
+from api.utils import naptime
 
 
-def get_empty_automated_car_route():
-    return autonomous_car.get_empty_route()
+def is_valid_status(status):
+    return status.upper() in autonomous_car.STATUS_LIST
 
 
-def get_random_car_route():
+def get_reliable_car_route():
     return autonomous_car.get_random_route()
 
 
-def get_car_route(status):
-    utils.random_nap_time()
-    utils.perform_evil_roulette()  # Be Evil
-    return autonomous_car.get_random_car_route_from_status(status)
+def get_unreliable_car_route(status):
+    naptime()
+
+    # Be Evil
+    roulette = random.randint(1, 3)
+    print(f'Database roulette {roulette}')
+    if roulette == 3:
+        raise Exception("Database not found!")
+    return autonomous_car.get_car_route(status)

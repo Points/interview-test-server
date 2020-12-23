@@ -1,16 +1,20 @@
-from api import utils
-from api.tax_calculator import tax_brackets
+import random
 
-
-def get_all_tax_brackets():
-    return tax_brackets.get_all_tax_brackets()
+from api.utils import naptime
+from .tax_brackets import get_tax_brackets
 
 
 def get_reliable_brackets():
-    return tax_brackets.get_tax_brackets()
+    return get_tax_brackets()
 
 
 def get_unreliable_brackets(tax_year):
-    utils.random_nap_time()
-    utils.perform_evil_roulette()  # Be Evil
-    return tax_brackets.get_tax_brackets(tax_year)
+    naptime()
+
+    # Be Evil
+    roulette = random.randint(1, 3)
+    print(f'Database roulette {roulette}')
+    if roulette == 3:
+        raise Exception("Database not found!")
+
+    return get_tax_brackets(tax_year)
