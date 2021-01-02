@@ -1,4 +1,4 @@
-import http
+from http import HTTPStatus
 
 from flask import abort
 from flask import jsonify
@@ -23,7 +23,7 @@ def random_automated_car_route():
 @app.route('/autonomous-car/routes/<string:status>/')
 def automated_car_route(status):
     if not controllers.is_valid_status(status):
-        abort(http.HTTPStatus.NOT_FOUND)
+        abort(HTTPStatus.NOT_FOUND)
     return jsonify({
         'car_route': controllers.get_unreliable_car_route(status)
     })
