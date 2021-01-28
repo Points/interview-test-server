@@ -21,6 +21,6 @@ def get_tax_brackets(tax_year='2020'):
     try:
         return _open_config(file_with_path)
     except FileNotFoundError:
-        raise ValueError(
+        raise FileNotFoundError(
             f"Tax brackets for the year '{tax_year}' were not found."
-        )
+    )
