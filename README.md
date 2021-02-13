@@ -1,6 +1,17 @@
 # Interview Test Server
 
-For the Points developer take-home assignment, the following task is required: you are to build a tax calculator against this API. The purpose is to develop an income tax calculator to help illustrate how marginal taxes work. This server is pretty simple, only returning the tax rates for a given year. You are to calculate the amount of taxes owed by inputting a yearly salary, then displaying the different rates, the total amount owed and the effective tax rates.
+For the Points developer take-home assignment, the following task is required: you are to build a tax calculator against
+ this API. The purpose is to develop an income tax calculator to help illustrate how marginal taxes work. This server is
+  pretty simple, only returning the tax rates for a given year. You are to calculate the amount of taxes owed by 
+  inputting a yearly salary, then displaying the different rates, the total amount owed and the effective tax rates.
+
+For all of the below assignments there are different levels that you can work on:
+ * **Level 1:** The easier level, the API always behaves and the response never changes.
+ * **Level 2:** More difficult, the API doesn't always behave and includes gotchas.
+ 
+If you complete the first level with ease, feel free to jump to the next one. 
+
+**Please timebox your solution to one day total.**
 
 ## Assignment 1: Tax Calculator
 
@@ -13,7 +24,6 @@ For the Points developer take-home assignment, the following task is required: y
     * Calculates and displays the total taxes owed for the salary
     * Displays the amount of taxes owed per band
     * Displays the effective rate
-* There are different levels to this assignment, level 1 being the easiest, level 2 having some gotchas, etc. If you complete a level with ease, feel free to jump to the next one. Please timebox your solution to one day total.
 
 ### Level 1
 
@@ -35,7 +45,6 @@ _Warning: this endpoint has gotchas_
     * Takes a set of instructions as input
     * Determine's if the route was a success or a failure
     * If it was a failure, determine at which step or position that failed
-* There are different levels to this assignment, level 1 being the easiest, level 2 having some gotchas, etc. If you complete a level with ease, feel free to jump to the next one. Please timebox your solution to one day total.
 
 ### Level 1
 
