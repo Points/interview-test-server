@@ -41,18 +41,17 @@ _Warning: this endpoint has gotchas_
 
 * Download and run this server (see [Getting Started](#getting-started))
 * Build an application / tool in React or Python with the following criteria:
-    * Fetches the a autonomous car route from this API server
-    * Takes a set of instructions as input
-    * Determine's if the route was a success or a failure
-    * If it was a failure, determine at which step or position that failed
-
+    * Fetches an autonomous car route from this API server
+    * Determines if the route was a success or a failure
+    * If the route results in a failure, determine the cause as well as the step and position where the failure occurred
+  
 ### Level 1
 
-* Fetch a random autonomous car route from this server at: [localhost:5000/autonomous-car/routes/](http://localhost:5000/autonomous-car/routes/)
+* Fetch a successful autonomous car route from this server at: [localhost:5000/autonomous-car/routes/](http://localhost:5000/autonomous-car/routes/)
 
 ### Level 2
 
-* Fetch an autonomous car route by status: [localhost:5000/autonomous-car/routes/<success|failure|empty>](http://localhost:5000/autonomous-car/routes/empty)
+* Fetch a random autonomous car route by status: [localhost:5000/autonomous-car/routes/random](http://localhost:5000/autonomous-car/routes/random)
 
 _Warning: this endpoint has gotchas_
 

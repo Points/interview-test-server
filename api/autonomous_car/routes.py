@@ -1,6 +1,3 @@
-from http import HTTPStatus
-
-from flask import abort
 from flask import jsonify
 from flask import render_template
 
@@ -14,16 +11,14 @@ def automated_car_instructions():
 
 
 @app.route('/autonomous-car/routes/')
-def random_automated_car_route():
+def automated_car_route():
     return jsonify({
         'car_route': controllers.get_reliable_car_route()
     })
 
 
-@app.route('/autonomous-car/routes/<string:status>/')
-def automated_car_route(status):
-    if not controllers.is_valid_status(status):
-        abort(HTTPStatus.NOT_FOUND)
+@app.route('/autonomous-car/routes/random/')
+def random_automated_car_route():
     return jsonify({
-        'car_route': controllers.get_unreliable_car_route(status)
+        'car_route': controllers.get_unreliable_car_route()
     })

@@ -1,8 +1,6 @@
-from flask import jsonify
-from flask import render_template
-
-from api.tax_calculator import controllers
+from flask import jsonify, render_template
 from app import app
+from . import controllers
 
 
 @app.route('/tax-calculator/')

@@ -8,9 +8,8 @@
     <div>Build an application / tool in React or Python with the following criteria:</div>
     <ul>
         <li>Fetches a car route from this API server</li>
-        <li>Takes a set of instructions as input</li>
-        <li>Determine's if the route was a success or a failure</li>
-        <li>If it was a failure, determine at which step or position that failed</li>
+        <li>Determines if the route was a success or a failure</li>
+        <li>If the route results in a failure, determine the cause as well as the step and position where the failure occurred</li>
     </ul>
     <p>
         There are different levels to this assignment, level 1 being the easiest, level 2
@@ -20,15 +19,15 @@
     <h4>Level 1</h4>
     <ul>
         <li>
-            Fetch a random autonomous car route from this server at:
+            Fetch a static autonomous car route from this server at:
             <a href="http://localhost:5000/autonomous-car/routes/">localhost:5000/autonomous-car/routes/</a>
         </li>
     </ul>
     <h4>Level 2</h4>
     <ul>
         <li>
-            Fetch an autonomous car route by status:
-            <a href="http://localhost:5000/autonomous-car/routes/empty">localhost:5000/autonomous-car/routes/[success|failure|empty]</a>
+            Fetch a random autonomous car route:
+            <a href="http://localhost:5000/autonomous-car/routes/random/">localhost:5000/autonomous-car/routes/random/</a>
         </li>
     </ul>
     <div><em>Warning: this endpoint has gotchas</em></div>

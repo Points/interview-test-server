@@ -1,10 +1,10 @@
-import flask
-import flask_cors
+from flask import Flask, render_template, jsonify
+from flask_cors import CORS
 
 from api.error_handlers import format_error
 
-app = flask.Flask(__name__)
-flask_cors.CORS(app)
+app = Flask(__name__)
+CORS(app)
 
 
 @app.route('/')
