@@ -22,7 +22,7 @@ There are different levels to this assignment, level 1 being the easiest, level 
 
 * Fetch the tax rates by year: http://localhost:5000/tax-calculator/brackets/<2019|2020|...>
 
-_Warning: this endpoint has gotchas_
+_Warning: this endpoint has gotchas, which require special handling in your code._
 
 ## Getting started
 
@@ -41,7 +41,7 @@ Please *do not fork or submit pull requests* to this repository.
 
 Please timebox your solution to one day total.
 
-* Implement your solution using JavaScript or Python.
+* Implement your solution using JavaScript or Python/Java.
 * Include comments where you feel that they would be helpful.
 * Include a README with instructions on how setup, run, and test the application.
 * Include unit tests.
@@ -52,7 +52,7 @@ Please timebox your solution to one day total.
 * Target the latest stable version of Google Chrome.
 * Format the code according to the latest eslint specs
 
-**If using Python**
+**If using Python or Java**
 
 * Implement a simple yet intuitive command line interface.
-* Format the code following PEP8 guidelines
+* Format the code following PEP8 guidelines (Python only)
