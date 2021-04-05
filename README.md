@@ -5,7 +5,7 @@ For the Points developer take-home assignment, the following task is required: y
 ## Instructions
 
 * Download and run this server (see [Getting Started](#getting-started))
-* Build an application / tool in React or Python with the following criteria:
+* Build an application / tool in a language as agreed with your hiring manager:
     * Fetches the tax rates from this API server
     * Takes a yearly salary as input
     * Calculates and displays the total taxes owed for the salary
@@ -41,7 +41,7 @@ Please *do not fork or submit pull requests* to this repository.
 
 Please timebox your solution to one day total.
 
-* Implement your solution using JavaScript or Python.
+* Implement your solution using a language agreed upon by your hiring manager.
 * Include comments where you feel that they would be helpful.
 * Include a README with instructions on how setup, run, and test the application.
 * Include unit tests.
@@ -50,9 +50,14 @@ Please timebox your solution to one day total.
 
 * Create a simple, yet visually appealing and responsive design.
 * Target the latest stable version of Google Chrome.
-* Format the code according to the latest eslint specs
 
-**If using Python**
+**If using a backend language**
 
 * Implement a simple yet intuitive command line interface.
-* Format the code following PEP8 guidelines
+
+**Code Formatting**
+
+If using one of the following languages, make sure it adheres to the corresponding style guide:
+
+* JavaScript : Eslint
+* Python : PEP8

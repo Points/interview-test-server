@@ -7,7 +7,7 @@
 {% block title %}Tax Calculator{% endblock %}
 {% block main_content %}
     <h1>Tax Calculator Assignment</h1>
-    <div>Build an application / tool in React or Python with the following criteria:</div>
+    <div>Build an application / tool in your selected language with the following criteria:</div>
     <ul>
         <li>Fetches the tax rates from this API server</li>
         <li>Takes a yearly salary as input</li>
@@ -21,13 +21,12 @@
         the next one. <strong>Please timebox your solution to 1 day max</strong>.
     </p>
     <h2>Level 1</h2>
-    <ul>
-        <li>Fetch the tax rates from this server at: <a href="/tax-calculator/brackets/">http://localhost:5000/tax-calculator/brackets/</a></li>
-    </ul>
+    <p>
+        Fetch the tax rates from this server at:
+        <a href="/tax-calculator/brackets/">http://localhost:5000/tax-calculator/brackets/</a>
+    </p>
     <div class='row'>
-        <h2>Level 2 </h2><em class='level-2-note'> (returns some bad responses, handle accordingly)</em>
+        <h2>Level 2 </h2><em class='level-2-note'> (sometimes returns bad responses, handle accordingly)</em>
     </div>
-    <ul>
-        <li>Fetch the tax rates by year: <a href="/tax-calculator/brackets/2020">http://localhost:5000/tax-calculator/brackets/[2019|2020|...]</a></li>
-    </ul>
+    <p>Fetch the tax rates by year: <a href="/tax-calculator/brackets/2020">http://localhost:5000/tax-calculator/brackets/[2019|2020|...]</a></p>
 {% endblock main_content %}
