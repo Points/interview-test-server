@@ -35,3 +35,4 @@ def instructions():
 
 
 from api.tax_calculator.routes import *
+from api.autonomous_car.routes import *
