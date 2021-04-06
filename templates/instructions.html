@@ -1,11 +1,7 @@
-<!doctype html>
-<html>
-<head>
-    <title>Interview Test Server</title>
-</head>
-<body>
-    <h3>Interview Test Server</h3>
-    <p>Build one of the following applications in React or Python</p>
+{% extends 'base.html' %}
+{% block main_content %}
+    <h1>Interview Test Server</h1>
+    <p>Build one of the following applications in a language agreed upon by your hiring manager.</p>
     <p>
         There are different levels to each assignment, level 1 being the easiest,
         level 2 having some gotchas, etc. If you complete a level with ease, feel
@@ -16,5 +12,4 @@
             <a href="/tax-calculator">Tax Calculator</a>
         </li>
     </ol>
-</body>
-</html>
+{% endblock main_content %}
