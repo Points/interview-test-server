@@ -1,23 +1,14 @@
-<!doctype html>
-<html>
-    <head>
-        <title>Interview Test Server</title>
-    </head>
-    <body>
-        <h3>Interview Test Server</h3>
-        <p>Build one of the following applications in React or Python</p>
-        <p>
-            There are different levels to each assignment, level 1 being the easiest,
-            level 2 having some gotchas, etc. If you complete a level with ease, feel
-            free to jump to the next one. Please timebox your solution to 1 day max.
-        </p>
-        <ol>
-            <li>
-                <a href="/tax-calculator/">Tax Calculator</a>
-            </li>
-            <li>
-                <a href="/autonomous-car/">Automated Car</a>
-            </li>
-        </ol>
-    </body>
-</html>
+{% extends 'base.html' %}
+{% block main_content %}
+    <h1>Interview Test Server</h1>
+    <p>Build one of the following applications in a language agreed upon by your hiring manager.</p>
+    <p>
+        There are different levels to each assignment, level 1 being the easiest,
+        level 2 having some gotchas, etc. If you complete a level with ease, feel
+        free to jump to the next one. Please timebox your solution to 1 day max.
+    </p>
+    <ol>
+        <li><a href="/tax-calculator">Tax Calculator Assignment</a></li>
+        <li><a href="/autonomous-car">Autonomous Car Assignment</a></li>
+    </ol>
+{% endblock main_content %}

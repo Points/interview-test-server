@@ -10,6 +10,9 @@ from api.tax_calculator.controllers import (
 
 
 app = Flask(__name__)
+app.jinja_env.auto_reload = True
+app.config['TEMPLATES_AUTO_RELOAD'] = True
+
 CORS(app)
 
 @app.errorhandler(404)
