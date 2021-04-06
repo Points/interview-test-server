@@ -2,9 +2,10 @@
 
 For the Points developer take-home assignment, the following task is required: you are to build a tax calculator against
  this API. The purpose is to develop an income tax calculator to help illustrate how marginal taxes work. This server is
-  pretty simple, only returning the tax rates for a given year. You are to calculate the amount of taxes owed by 
-  inputting a yearly salary, then displaying the different rates, the total amount owed and the effective tax rates.
+ pretty simple, only returning the tax rates for a given year. You are to calculate the amount of taxes owed by 
+ inputting a yearly salary, then displaying the different rates, the total amount owed and the effective tax rates.
 
+## Instructions
 For all of the below assignments there are different levels that you can work on:
  * **Level 1:** The easier level, the API always behaves and the response never changes.
  * **Level 2:** More difficult, the API doesn't always behave and includes gotchas.
@@ -53,7 +54,7 @@ The autonomous car starts at position `0` on lane `"b"`, drives itself to the en
  
 ### Instructions
 
-1. Download and run this server (see [Getting Started](#getting-started))
+1. Download and run this server (see [Getting Started](#getting-started)).
 2. Build an application / tool in a language as agreed with your hiring manager:
    * Fetches an autonomous car route JSON object from this API server (see the different levels below). 
    * Use the route object's "track" & "travelLog" information to determine if the simulation will end successfully or
@@ -87,7 +88,8 @@ For this level, you can use fetch a static route object from each of the followi
 
 For this level, you can fetch a random route (including the empty-route) using the endpoint:
 * [/autonomous-car/routes/random](http://localhost:5000/autonomous-car/routes/random)
-* *Warning: this endpoint has gotchas*
+
+_Warning: this endpoint has gotchas_
 
 
 ## Getting started
