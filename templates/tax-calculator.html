@@ -1,32 +1,127 @@
 {% extends 'base.html' %}
-{% block styles %}
-.level-2-note {
-    margin-left: 8px;
-}
-{% endblock styles %}
-{% block title %}Tax Calculator{% endblock %}
+
+{% block title %}Tax Calculator Assignment{% endblock %}
+
 {% block main_content %}
-    <h1>Tax Calculator Assignment</h1>
-    <div>Build an application / tool in your selected language with the following criteria:</div>
-    <ul>
-        <li>Fetches the tax rates from this API server</li>
-        <li>Takes a yearly salary as input</li>
-        <li>Calculates and displays the total taxes owed for the salary</li>
-        <li>Displays the amount of taxes owed per band</li>
-        <li>Displays the effective rate</li>
-    </ul>
-    <p>
-        There are different levels to this assignment, level 1 being the easiest, level 2
-        having some gotchas, etc. <br/>If you complete a level with ease, feel free to jump to
-        the next one. <strong>Please timebox your solution to 1 day max</strong>.
-    </p>
-    <h2>Level 1</h2>
-    <p>
-        Fetch the tax rates from this server at:
-        <a href="/tax-calculator/brackets/">http://localhost:5000/tax-calculator/brackets/</a>
-    </p>
-    <div class='row'>
-        <h2>Level 2 </h2><em class='level-2-note'> (sometimes returns bad responses, handle accordingly)</em>
-    </div>
-    <p>Fetch the tax rates by year: <a href="/tax-calculator/brackets/2020">http://localhost:5000/tax-calculator/brackets/[2019|2020|...]</a></p>
+    <nav id="sidebar">
+        <img src="../static/images/points-logo-transparent.png" alt="PointsLogo">
+        <a href="/">
+            <i class="fa fa-fw fa-home large-icon"></i>
+            Home Page
+        </a>
+        <a class="active" href="/tax-calculator/">
+            <i class="fas fa-calculator small-icon"></i>
+            Tax Calculator App
+        </a>
+        <a href="/autonomous-car/">
+            <i class="fas fa-car medium-icon"></i>
+            Autonomous Car App
+        </a>
+    </nav>
+    <main>
+        <header>
+            <div id="title-section" class="panel centered">
+                <h1 class="points-grey-text">
+                    Tax Calculator Application
+                </h1>
+            </div>
+        </header>
+        <article>
+            <div class="panel assignment-banner">
+                <div class="panel-item" style="width:65%">
+                    <h3>Assignment Description:</h3>
+                    <p>
+                        Points wants to build an income tax calculator to help show its users how marginal taxes work.
+                        <br>
+                        This calculator will take in a user's annual gross income and the year they are filing.
+                        After fetching the corresponding tax bracket through an API request, the calculator will output:
+                        <ol>
+                            <li>The total amount they owe in federal income tax.</li>
+                            <li>The effective tax rate.</li>
+                            <li>A break down of tax rates and amounts for each applicable tax bracket,.</li>
+                        </ol>
+                    </p>
+
+                    <h3>General Requirements: <button onclick="myFunction('general')">Try it</button></h3>
+                    <div id="general" class="myDIV">
+                        <ul>
+                            <li>
+                                Your application must include a README with instructions on how to setup, run and test
+                                the calculator.
+                            </li>
+                            <li>Unit tests.</li>
+                            <li><em>Optional:</em> Comments where you feel they would be most helpful.</li>
+                        </ul>
+                    </div>
+
+                    <h3>Front End Application Requirements: <button onclick="myFunction('front')">Try it</button></h3>
+                    <div id="front" class="myDIV">
+                        <ul>
+                            <li>
+                                Your application must include a README with instructions on how to setup, run and test
+                                the calculator.
+                            </li>
+                            <li>Unit tests.</li>
+                            <li><em>Optional:</em> Comments where you feel they would be most helpful.</li>
+                        </ul>
+                    </div>
+
+
+                    <h3>Back end Application Requirements: <button onclick="myFunction('back')">Try it</button></h3>
+                    <div id="back" class="myDIV">
+                        <ul>
+                            <li>
+                                Your application must include a README with instructions on how to setup, run and test
+                                the calculator.
+                            </li>
+                            <li>Unit tests.</li>
+                            <li><em>Optional:</em> Comments where you feel they would be most helpful.</li>
+                        </ul>
+                    </div>
+                </div>
+                <img class="panel-item"
+                     src="../static/images/calculator-icon.png"
+                     alt="TaxCalculator-Image"
+                     width="275px"
+                >
+            </div>
+
+            <div>
+                <br>
+                <h3 class="description">Level 1 Endpoint: </h3>
+                <div class="description panel">
+                    <pre class="panel-item">http://localhost:5000/tax-calculator/brackets/</pre>
+                    <button class="panel-item endpoint-button" onclick="location.href = '/tax-calculator/brackets/';">
+                        Go To Endpoint
+                        <i class="fas fa-mouse-pointer medium-icon"></i>
+                    </button>
+                </div>
+
+                <h3 class="description">Level 2 Endpoint: </h3>
+                <div class="description panel">
+                    <pre class="panel-item">http://localhost:5000/tax-calculator/brackets/&lt;2019 | 2020 | ...&gt;</pre>
+                    <button class="panel-item endpoint-button" onclick="location.href = '/tax-calculator/brackets/';">
+                        Go To Endpoint
+                        <i class="fas fa-mouse-pointer medium-icon"></i>
+                    </button>
+                </div>
+
+                <div class="alert centered">
+                    <strong><i class="fas fa-exclamation-triangle"></i> WARNING:</strong>
+                    This Endpoint Includes Some Gotchas.
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <script>
+        function myFunction(id) {
+          var x = document.getElementById(id);
+          if (x.style.display === "none") {
+            x.style.display = "block";
+          } else {
+            x.style.display = "none";
+          }
+        }
+    </script>
 {% endblock main_content %}

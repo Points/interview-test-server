@@ -1,0 +1,394 @@
+html, body {
+    background-color: #FFFFFF;
+    color: #636366;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    max-width: 100%;
+    min-height: 100%;
+}
+
+/* Side Navigation */
+nav {
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #636366;
+    overflow-x: hidden;
+    padding-top: 16px;
+}
+
+nav img {
+    width: 270px;
+    height: 140px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+}
+
+nav a {
+    padding: 6px 8px 6px 30px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+}
+
+nav a:hover {
+    color: #42C8F3;
+}
+
+.active {
+    background-color: #ED1651;
+    color: white;
+}
+
+.active:hover {
+    color: white;
+}
+
+/* Icon's Aren't Always The Same Size */
+.small-icon {
+    margin-right: 5px;
+    margin-left: 6px;
+}
+
+.medium-icon {
+    margin-right: 4px;
+    margin-left: 5px;
+}
+
+.large-icon {
+    margin-right: 2px;
+    margin-left: 2px;
+}
+
+/* Main Section of the Assignment */
+main {
+    margin-left: 300px; /* Same as the width of the sidenav */
+    padding: 0px 10px;
+    color: #636366;
+    width: 75%
+    margin-right: 0px;
+}
+
+/* Main-Header (Title) Section */
+header {
+    height: 175px;
+    padding-top: 50px;
+    font-size: 30px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+/* Main-Article (Assignment Description) Section */
+article {
+    width: 100%;
+}
+
+.assignment-banner {
+    width: 100%;
+}
+
+/* How to display code on a website */
+pre {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-left: 3px solid #ED1651;
+    color: #666;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    width: 80%;
+    overflow: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
+    margin-right: 2%;
+}
+
+/* Cool Buttons */
+.endpoint-button {
+    background-color: #42C8F3;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    height: 65px;
+    width: 13%;
+}
+
+.endpoint-button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.large-assignment-button {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 300px;
+  margin-left: 25px;
+  float: left;
+}
+
+.large-assignment-button:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.large-assignment-button a {
+    text-decoration: none;
+}
+
+.large-assignment-button-image {
+    width: 50%;
+    height: 40%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.large-assignment-button-description {
+    font-size: 15px;
+}
+
+.container {
+    padding: 2px 16px;
+}
+
+.alert {
+    margin-left: 25px;
+    background-color: #ff9800;
+    color: white;
+    opacity: 1;
+    transition: opacity 0.6s;
+    margin-bottom: 15px;
+    width: 95%;
+}
+
+/* Helpful class names that can be added anywhere */
+.description {
+    margin-left: 25px;
+}
+
+.no-decoration-link {
+    color: inherit;
+    text-decoration: none;
+}
+.no-decoration-link:hover, .no-decoration-link:visited { color: inherit;}
+
+.centered { text-align: center;}
+.left { text-align: left;}
+
+.panel {
+    display: inline-block;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.panel-item {
+    float: left;
+    padding-left: 25px;
+}
+
+.myDIV {
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    background-color: lightblue;
+    margin-top: 20px;
+}
+
+/* Colours */
+.points-old-color-background { background-color: #6BCFF6;}
+.points-old-color-text { color: #6BCFF6;}
+
+.points-pink-background { background-color: #ED1651;}
+.points-pink-text { color: #ED1651;}
+
+.points-blue-background { background-color: #42C8F3;}
+.points-blue-text { color: #42C8F3;}
+
+.points-grey-background { background-color: #636366;}
+.points-grey-text { color: #636366;}
+
+
+/* Making the website more response */
+@media screen and (max-width: 1200px) {
+    html, body {
+        font-size: 10px;
+    }
+
+    /* Side Navigation */
+    nav {
+        height: 100%;
+        width: 300px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #636366;
+        overflow-x: hidden;
+        padding-top: 16px;
+    }
+
+    nav img {
+        width: 270px;
+        height: 140px;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: 20px;
+    }
+
+    nav a {
+        padding: 6px 8px 6px 30px;
+        text-decoration: none;
+        font-size: 20px;
+        color: white;
+        display: block;
+    }
+
+    nav a:hover {
+        color: #42C8F3;
+    }
+
+    .active {
+        background-color: #ED1651;
+        color: #42C8F3;
+    }
+
+    /* Icon's Aren't Always The Same Size */
+    .small-icon {
+        margin-right: 5px;
+        margin-left: 6px;
+    }
+
+    .medium-icon {
+        margin-right: 4px;
+        margin-left: 5px;
+    }
+
+    .large-icon {
+        margin-right: 2px;
+        margin-left: 2px;
+    }
+
+    /* Main Section of the Assignment */
+    main {
+        margin-left: 300px; /* Same as the width of the sidenav */
+        padding: 0px 10px;
+        color: #636366;
+        width: 75%
+        margin-right: 0px;
+    }
+
+    /* Main-Header (Title) Section */
+    header {
+        height: 175px;
+        padding-top: 50px;
+        font-size: 30px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    /* Main-Article (Assignment Description) Section */
+    article {
+        width: 100%;
+    }
+
+    .assignment-banner {
+        width: 100%;
+    }
+
+    /* How to display code on a website */
+    pre {
+        background: #f4f4f4;
+        border: 1px solid #ddd;
+        border-left: 3px solid #ED1651;
+        color: #666;
+        page-break-inside: avoid;
+        font-family: monospace;
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 1.6em;
+        width: 80%;
+        overflow: auto;
+        padding: 1em 1.5em;
+        display: block;
+        word-wrap: break-word;
+        margin-right: 2%;
+    }
+
+    /* Cool Buttons */
+    .endpoint-button {
+        background-color: #42C8F3;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        transition-duration: 0.4s;
+        height: 65px;
+        width: 13%;
+    }
+
+    .endpoint-button:hover {
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+
+    .large-assignment-button {
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      transition: 0.3s;
+      width: 300px;
+      margin-left: 25px;
+      float: left;
+    }
+
+    .large-assignment-button:hover {
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+
+    .large-assignment-button a {
+        text-decoration: none;
+    }
+
+    .large-assignment-button-image {
+        width: 50%;
+        height: 40%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+
+    .large-assignment-button-description {
+        font-size: 15px;
+    }
+
+    .container {
+        padding: 2px 16px;
+    }
+
+    .alert {
+        margin-left: 25px;
+        background-color: #ff9800;
+        color: white;
+        opacity: 1;
+        transition: opacity 0.6s;
+        margin-bottom: 15px;
+        width: 95%;
+    }
+}

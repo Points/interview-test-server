@@ -1,15 +1,77 @@
 {% extends 'base.html' %}
+
+{% block title %}Interview Test Server{% endblock %}
+
 {% block main_content %}
-    <h1>Interview Test Server</h1>
-    <p>Build one of the following applications in a language agreed upon by your hiring manager.</p>
-    <p>
-        There are different levels to each assignment, level 1 being the easiest,
-        level 2 having some gotchas, etc. If you complete a level with ease, feel
-        free to jump to the next one. Please timebox your solution to 1 day max.
-    </p>
-    <ol>
-        <li>
-            <a href="/tax-calculator">Tax Calculator</a>
-        </li>
-    </ol>
+    <nav id="sidebar">
+        <img src="../static/images/points-logo-transparent.png" alt="PointsLogo">
+        <a class="active" href="/">
+            <i class="fa fa-fw fa-home large-icon"></i>
+            Home Page
+        </a>
+        <a href="/tax-calculator/">
+            <i class="fas fa-calculator small-icon"></i>
+            Tax Calculator App
+        </a>
+        <a href="/autonomous-car/">
+            <i class="fas fa-car medium-icon"></i>
+            Autonomous Car App
+        </a>
+    </nav>
+    <main id="main-section">
+        <header>
+            <div id="title-section" class="panel centered">
+                <a class="no-decoration-link" href="/">
+                    <h1 class="points-grey-text">
+                        <i class="fas fa-code"></i>
+                        Points Interview Server
+                        <i class="fas fa-code"></i>
+                    </h1>
+                </a>
+            </div>
+        </header>
+        <article>
+            <div id="description-section">
+                <h3>Welcome Candidate!</h3>
+                <p class="description">
+                    If you are seeing this page then you have successfully navigated to our interview test server!
+                    <br><br>
+                    Below are the two different assignment options that this test server supports, please build one
+                    of the following applications in the language agreed upon with your hiring manager.
+                    <br><br>
+                    For each assignment there are different endpoints that you can use to fetch JSON objects from.
+                    The endpoints have been separated into two levels, level 1 being the easiest (safe and reliable)
+                    and level 2, which contains some 'gotchas' and other unexpected behaviour.
+                    <br><br>
+                    If you complete the first level with ease, feel free to jump to the next level,
+                    but please <a href="https://en.wikipedia.org/wiki/Timeboxing" target="_blank">timebox</a> your
+                    solution <strong>to a maximum of one day</strong>.
+                </p>
+            </div>
+            <div id="assignment-section">
+                <h3>Assignment Options:</h3>
+
+                <div id="large-assignment-buttons" class="panel">
+                    <div id="tax-calculator-button" class="large-assignment-button centered">
+                        <a href="/tax-calculator/" class="no-decoration-link">
+                            <img class="large-assignment-button-image" src="../static/images/calculator-icon.png" alt="TaxCalculator-Image">
+                            <div class="container">
+                                <h4><b>Tax Calculator</b></h4>
+                                <p class="large-assignment-button-description">Calculate the total amount owed in taxes based on an income.</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div id="autonomous-car-button" class="large-assignment-button centered">
+                        <a href="/autonomous-car/" class="no-decoration-link">
+                            <img class="large-assignment-button-image" src="../static/images/car-icon-1.png" alt="AutonomousCar-Image">
+                            <div class="container">
+                                <h4><b>Autonomous Car</b></h4>
+                                <p class="large-assignment-button-description">Navigate a car based on a provided track and instructions.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
 {% endblock main_content %}

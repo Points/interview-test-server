@@ -1,2 +1,5 @@
 *.swp
 *.un~
+.idea/
+*__pycache__/
+venv/

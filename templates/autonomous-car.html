@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block title %}Autonomous Car Assignment{% endblock %}
+
+{% block main_content %}
+
+    <nav id="sidebar">
+        <img src="../static/images/points-logo-transparent.png" alt="PointsLogo">
+        <a href="/">
+            <i class="fa fa-fw fa-home large-icon"></i>
+            Home Page
+        </a>
+        <a href="/tax-calculator/">
+            <i class="fas fa-calculator small-icon"></i>
+            A1: Tax Calculator
+        </a>
+        <a class="active" href="/autonomous-car/">
+            <i class="fas fa-car medium-icon"></i>
+            A2: Autonomous Car
+        </a>
+    </nav>
+    <main>
+        <header>
+            <div id="title-section" class="panel centered">
+                <h1 class="points-grey-text">
+                    Autonomous Car Assignment
+                </h1>
+            </div>
+        </header>
+        <article>
+            <div class="panel assignment-banner">
+                <div class="panel-item" style="width:65%">
+                    <h3>Assignment Description:</h3>
+                    <p>
+                        Build an application / tool in React or Python with the following criteria:
+                        <ul class="description">
+                            <li>Fetches a car route from this API server</li>
+                            <li>Determines if the route was a success or a failure</li>
+                            <li>If the route results in a failure, determine the cause as well as the step and position where the failure occurred</li>
+                        </ul>
+
+                        There are different levels to this assignment, level 1 being the easiest, level 2
+                        having some gotchas, etc. <br/>If you complete a level with ease, feel free to jump to
+                        the next one. <strong>Please timebox your solution to 1 day max</strong>.
+                    </p>
+                </div>
+                <img class="panel-item"
+                     src="../static/images/car-icon-1.png"
+                     alt="AutomatedCar-Image"
+                     width="275px"
+                >
+            </div>
+
+            <div>
+                <br>
+                <h3 class="description">Level 1 Endpoint: </h3>
+                <div class="description panel">
+                    <pre class="panel-item">http://localhost:5000/autonomous-car/routes/</pre>
+                    <button class="panel-item endpoint-button" onclick="location.href = '/autonomous-car/routes/';">
+                        Go To Endpoint
+                        <i class="fas fa-mouse-pointer medium-icon"></i>
+                    </button>
+                </div>
+
+                <h3 class="description">Level 2 Endpoint: </h3>
+                <div class="description panel">
+                    <pre class="panel-item">http://localhost:5000/autonomous-car/routes/random/</pre>
+                    <button class="panel-item endpoint-button" onclick="location.href = '/autonomous-car/routes/random/';">
+                        Go To Endpoint
+                        <i class="fas fa-mouse-pointer medium-icon"></i>
+                    </button>
+                </div>
+
+                <div class="alert centered">
+                    <strong><i class="fas fa-exclamation-triangle"></i> WARNING:</strong>
+                    This Endpoint Includes Some Gotchas.
+                </div>
+            </div>
+        </article>
+    </main>
+{% endblock main_content %}

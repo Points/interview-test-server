@@ -1,12 +1,8 @@
-import random
-import time
 from flask import Flask, jsonify, render_template
 from flask_cors import CORS
 
 from api.error_handlers import format_error
-from api.tax_calculator.controllers import (
-    get_tax_brackets
-)
+
 
 
 app = Flask(__name__)
@@ -38,3 +34,4 @@ def instructions():
 
 
 from api.tax_calculator.routes import *
+from api.autonomous_car.routes import *
