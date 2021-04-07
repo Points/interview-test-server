@@ -30,11 +30,9 @@ If you complete the first level with ease, feel free to jump to the next one.
 
 * Fetch the tax rates from this server at: [localhost:5000/tax-calculator/brackets](http://localhost:5000/tax-calculator/brackets)
 
-### Level 2
+### Level 2 *(sometimes returns bad responses, handle accordingly)*
 
 * Fetch the tax rates by year: [localhost:5000/tax-calculator/brackets/<2019,2020...>](http://localhost:5000/tax-calculator/brackets/2020)
-
-_Warning: this endpoint has gotchas_
 
 ## Assignment 2: Autonomous Car
 
@@ -84,12 +82,10 @@ For this level, you can use fetch a static route object from each of the followi
    will return a route object that should result in failure due to running into an obstacle.
 
 
-### Level 2
+### Level 2 *(sometimes returns bad responses, handle accordingly)*
 
 For this level, you can fetch a random route (including the empty-route) using the endpoint:
 * [/autonomous-car/routes/random](http://localhost:5000/autonomous-car/routes/random)
-
-_Warning: this endpoint has gotchas_
 
 
 ## Getting started
