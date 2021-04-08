@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+{% block styles %}
+.level-2-note {
+    margin-left: 8px;
+}
+{% endblock styles %}
+{% block title %}Autonomous Car Assignment{% endblock %}
+{% block main_content %}
+<h1>Autonomous Car Assignment</h1>
+
+<h2>Description:</h2>
+<p>
+    Points is developing an autonomous vehicle program. It's going well, but we need to iron out a few bugs.
+    The Engineering Team would like to demo our progress to the Product Team, so we need to develop a tool that
+    can take track and travel log data, and then determine whether our autonomous vehicle successfully navigated the track.
+</p>
+<p>
+    Track and travel log data are encoded as JSON. The <span>"track"</span> array contains entries for any
+    position of the track where there is an obstacle in any of the 3 lanes (<span>"a"</span>, <span>"b"</span>,
+    or <span>"c"</span>). The <span>"travelLog"</span> array contains entries for any position of the track
+    where the car has changed lanes, either to the <span>"left"</span> or <span>"right"</span>.
+</p>
+<p>
+    The autonomous car starts at <span>position 0</span> on lane <span>"b"</span>, drives itself to the end of
+    the track and can shift only one lane per position. The simulation should end when the car hits an obstacle,
+    goes out-of-bounds, or when all <span>"track"</span> and <span>"travelLog"</span> entries have been
+    processed.
+</p>
+
+<h2>Instructions:</h2>
+
+<p>Build an application / tool in your selected language with the following criteria:
+    <ul>
+        <li>
+            Fetches an autonomous car route JSON object from this API server (see the different levels below).
+        </li>
+        <li>Use the route object's <span>"track"</span> & <span>"travelLog"</span> information to determine if
+            the simulation will end successfully or if it will fail.
+        </li>
+        <li>
+            If the simulation results in a success, the application must return the following success response:
+            <br><br><span>{"status":  "success"}</span><br><br>
+        </li>
+        <li>
+            If the simulation results in a failure (running out of bounds or hitting an obstacle), the
+            application must return an error response showing at which position the simulation fails:
+            <br><br><span>{"status":  "error", "position": 2}</span><br><br>
+        </li>
+    </ul>
+</p>
+
+<h2>Getting Autonomous Car Routes:</h2>
+<p>
+    There are different levels to this assignment, level 1 being the easiest, level 2
+    having some gotchas, etc. If you complete a level with ease, feel free to jump to
+    the next one. <strong>Please timebox your solution to 1 day max</strong>.
+</p>
+
+<h3>Level 1</h3>
+<p>
+    For this level, you can use fetch a static route object from each of the following endpoints:
+    <ul>
+        <li>
+            <a href="/autonomous-car/routes/empty-route">
+                localhost:5000/autonomous-car/routes/empty-route
+            </a><br><br>
+            <ul>
+                <li>To retrieve a route with empty track & travelLog arrays.</li>
+            </ul><br>
+        </li>
+        <li>
+            <a href="/autonomous-car/routes/success-no-obstacles">
+                localhost:5000/autonomous-car/routes/success-no-obstacles
+            </a><br><br>
+            <ul>
+                <li>To retrieve a route that should result in a successful simulation.</li>
+                <li>The track <strong>does not contain any obstacles</strong>.</li>
+            </ul><br>
+        </li>
+        <li>
+            <a href="/autonomous-car/routes/success-with-obstacles">
+                localhost:5000/autonomous-car/routes/success-with-obstacles
+            </a><br><br>
+            <ul>
+                <li>To retrieve a route that should result in a successful simulation.</li>
+                <li>The track <strong>does contain multiple obstacles</strong>.</li>
+            </ul><br>
+        </li>
+        <li>
+            <a href="/autonomous-car/routes/failure-out-of-bounds">
+                localhost:5000/autonomous-car/routes/failure-out-of-bounds
+            </a><br><br>
+            <ul>
+                <li>To retrieve a route that should result in failure due to running out of bounds.</li>
+            </ul><br>
+        </li>
+        <li>
+            <a href="/autonomous-car/routes/failure-hits-obstacle">
+                localhost:5000/autonomous-car/routes/failure-hits-obstacle
+            </a><br><br>
+            <ul>
+                <li>To retrieve a route that should result in failure due to running into an obstacle.</li>
+            </ul><br>
+        </li>
+    </ul>
+</p>
+
+<div class='row'>
+    <h3>Level 2 </h3><em class='level-2-note'> (sometimes returns bad responses, handle accordingly)</em>
+</div>
+<ul>
+    <li>
+        <a href="/autonomous-car/routes/random/">
+            localhost:5000/autonomous-car/routes/random/
+        </a><br><br>
+        <ul>
+            <li>To retrieve a random route (including the empty-route).</li>
+        </ul><br>
+    </li>
+</ul>
+
+{% endblock main_content %}

@@ -1,0 +1,17 @@
+{
+  "track": [],
+  "travelLog": [
+    {
+      "position": 1,
+      "laneChange": "left"
+    },
+    {
+      "position": 5,
+      "laneChange": "right"
+    },
+    {
+      "position": 10,
+      "laneChange": "right"
+    }
+  ]
+}
