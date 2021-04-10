@@ -41,43 +41,6 @@
                             <li>A break down of tax rates and amounts for each applicable tax bracket,.</li>
                         </ol>
                     </p>
-
-                    <h3>General Requirements: <button onclick="myFunction('general')">Try it</button></h3>
-                    <div id="general" class="myDIV">
-                        <ul>
-                            <li>
-                                Your application must include a README with instructions on how to setup, run and test
-                                the calculator.
-                            </li>
-                            <li>Unit tests.</li>
-                            <li><em>Optional:</em> Comments where you feel they would be most helpful.</li>
-                        </ul>
-                    </div>
-
-                    <h3>Front End Application Requirements: <button onclick="myFunction('front')">Try it</button></h3>
-                    <div id="front" class="myDIV">
-                        <ul>
-                            <li>
-                                Your application must include a README with instructions on how to setup, run and test
-                                the calculator.
-                            </li>
-                            <li>Unit tests.</li>
-                            <li><em>Optional:</em> Comments where you feel they would be most helpful.</li>
-                        </ul>
-                    </div>
-
-
-                    <h3>Back end Application Requirements: <button onclick="myFunction('back')">Try it</button></h3>
-                    <div id="back" class="myDIV">
-                        <ul>
-                            <li>
-                                Your application must include a README with instructions on how to setup, run and test
-                                the calculator.
-                            </li>
-                            <li>Unit tests.</li>
-                            <li><em>Optional:</em> Comments where you feel they would be most helpful.</li>
-                        </ul>
-                    </div>
                 </div>
                 <img class="panel-item"
                      src="../static/images/calculator-icon.png"
@@ -85,13 +48,52 @@
                      width="275px"
                 >
             </div>
+            <div class="tab">
+                <button id="defaultOpen" class="tablink" onclick="openPage('front-end-instructions', this, '#42C8F3')">
+                    Front End Instructions
+                </button>
+                <button class="tablink" onclick="openPage('back-end-instructions', this, '#42C8F3')">
+                    Back End Instructions
+                </button>
+                <div id="front-end-instructions" class="tabcontent">
+                    <h3>Front End Instructions</h3>
+                    <ul>
+                        <li>Create a simple, yet visually appealing and responsive design.</li>
+                        <li>Create a <a href="https://en.wikipedia.org/wiki/Single-page_application">single page web application</a>
+                            (a web app that dynamically rewrites the current page with new data) with two screens.
+                        </li>
+                        <ul>
+                            <li>
+                                <strong>First Screen:</strong> Display a form, which includes an input field to accept
+                                the user's gross income and a submit button that navigates to the second screen.
+                            </li>
+                            <li>
+                                <strong>Second Screen:</strong> Display how much the user owes in income tax, the
+                                effective tax rate and the break down of tax rates and the amounts owed for each applicable tax bracket.
+                            </li>
+                        </ul>
+                        <li>The user must be able to navigate back to the first page. </li>
+                        <li>Target the latest stable version of <a href="https://www.google.com/chrome/">Google Chrome</a></li>
+                    </ul>
+                </div>
 
+                <div id="back-end-instructions" class="tabcontent">
+                    <h3>Back End Instructions</h3>
+                    <ul>
+                         <li>
+                             Implement a simple yet intuitive command line interface that takes in the user's gross
+                             income and outputs the user owes in income tax,<br> the effective tax rate and the break down
+                             of tax rates and the amounts owed for each applicable tax bracket.
+                         </li>
+                    </ul>
+                </div>
+            </div>
             <div>
                 <br>
                 <h3 class="description">Level 1 Endpoint: </h3>
                 <div class="description panel">
                     <pre class="panel-item">http://localhost:5000/tax-calculator/brackets/</pre>
-                    <button class="panel-item endpoint-button" onclick="location.href = '/tax-calculator/brackets/';">
+                    <button class="panel-item endpoint-button" onclick="window.open('/tax-calculator/brackets/', '_blank');">
                         Go To Endpoint
                         <i class="fas fa-mouse-pointer medium-icon"></i>
                     </button>
@@ -100,7 +102,7 @@
                 <h3 class="description">Level 2 Endpoint: </h3>
                 <div class="description panel">
                     <pre class="panel-item">http://localhost:5000/tax-calculator/brackets/&lt;2019 | 2020 | ...&gt;</pre>
-                    <button class="panel-item endpoint-button" onclick="location.href = '/tax-calculator/brackets/';">
+                    <button class="panel-item endpoint-button" onclick="window.open('/tax-calculator/brackets/', '_blank');">
                         Go To Endpoint
                         <i class="fas fa-mouse-pointer medium-icon"></i>
                     </button>
@@ -115,13 +117,21 @@
     </main>
 
     <script>
-        function myFunction(id) {
-          var x = document.getElementById(id);
-          if (x.style.display === "none") {
-            x.style.display = "block";
-          } else {
-            x.style.display = "none";
-          }
+        function openPage(pageName,elmnt,color) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+            document.getElementById(pageName).style.display = "block";
+            elmnt.style.backgroundColor = color;
         }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
     </script>
 {% endblock main_content %}

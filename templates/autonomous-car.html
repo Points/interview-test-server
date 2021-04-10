@@ -32,16 +32,19 @@
                 <div class="panel-item" style="width:65%">
                     <h3>Assignment Description:</h3>
                     <p>
-                        Build an application / tool in React or Python with the following criteria:
-                        <ul class="description">
-                            <li>Fetches a car route from this API server</li>
-                            <li>Determines if the route was a success or a failure</li>
-                            <li>If the route results in a failure, determine the cause as well as the step and position where the failure occurred</li>
-                        </ul>
-
-                        There are different levels to this assignment, level 1 being the easiest, level 2
-                        having some gotchas, etc. <br/>If you complete a level with ease, feel free to jump to
-                        the next one. <strong>Please timebox your solution to 1 day max</strong>.
+                        Points is developing an autonomous vehicle program. It's going well, but we need to iron out a
+                        few bugs. The Engineering Team would like to demo our progress to the Product Team, so we need
+                        to develop a tool that can take track and travel log data, and then determine whether our
+                        autonomous vehicle successfully navigated the track.
+                        <br><br>
+                        Track and travel log data are encoded as JSON. The "track" array contains entries for any
+                        position of the track where there is an obstacle in any of the 3 lanes ("a", "b" or "c").
+                        The "travelLog" array contains entries for any position of the track where the car has changed
+                        lanes, either to the "left" or "right".
+                        <br><br>
+                        The autonomous car starts at position 0 on lane "b", drives itself to the end of the track and
+                        can shift only one lane per position. The simulation should end when the car hits an obstacle,
+                        goes out-of-bounds, or when all "track" and "travelLog" entries have been processed.
                     </p>
                 </div>
                 <img class="panel-item"
@@ -51,12 +54,53 @@
                 >
             </div>
 
+            <div class="tab">
+                <button id="defaultOpen" class="tablink" onclick="openPage('front-end-instructions', this, '#42C8F3')">
+                    Front End Instructions
+                </button>
+                <button class="tablink" onclick="openPage('back-end-instructions', this, '#42C8F3')">
+                    Back End Instructions
+                </button>
+                <div id="front-end-instructions" class="tabcontent">
+                    <h3>Front End Instructions</h3>
+                    <ul>
+                        <li>Create a simple, yet visually appealing and responsive design.</li>
+                        <li>Create a <a href="https://en.wikipedia.org/wiki/Single-page_application">single page web application</a>
+                            (a web app that dynamically rewrites the current page with new data) with two screens.
+                        </li>
+                        <ul>
+                            <li>
+                                <strong>First Screen:</strong> Display a form, which includes an input field to accept
+                                the user's gross income and a submit button that navigates to the second screen.
+                            </li>
+                            <li>
+                                <strong>Second Screen:</strong> Display how much the user owes in income tax, the
+                                effective tax rate and the break down of tax rates and the amounts owed for each applicable tax bracket.
+                            </li>
+                        </ul>
+                        <li>The user must be able to navigate back to the first page. </li>
+                        <li>Target the latest stable version of <a href="https://www.google.com/chrome/">Google Chrome</a></li>
+                    </ul>
+                </div>
+
+                <div id="back-end-instructions" class="tabcontent">
+                    <h3>Back End Instructions</h3>
+                    <ul>
+                         <li>
+                             Implement a simple yet intuitive command line interface that takes in the user's gross
+                             income and outputs the user owes in income tax,<br> the effective tax rate and the break down
+                             of tax rates and the amounts owed for each applicable tax bracket.
+                         </li>
+                    </ul>
+                </div>
+            </div>
+
             <div>
                 <br>
                 <h3 class="description">Level 1 Endpoint: </h3>
                 <div class="description panel">
-                    <pre class="panel-item">http://localhost:5000/autonomous-car/routes/</pre>
-                    <button class="panel-item endpoint-button" onclick="location.href = '/autonomous-car/routes/';">
+                    <pre class="panel-item">http://localhost:5000/autonomous-car/routes/empty-route</pre>
+                    <button class="panel-item endpoint-button" onclick="window.open('/autonomous-car/routes/empty-route', '_blank');">
                         Go To Endpoint
                         <i class="fas fa-mouse-pointer medium-icon"></i>
                     </button>
@@ -65,7 +109,7 @@
                 <h3 class="description">Level 2 Endpoint: </h3>
                 <div class="description panel">
                     <pre class="panel-item">http://localhost:5000/autonomous-car/routes/random/</pre>
-                    <button class="panel-item endpoint-button" onclick="location.href = '/autonomous-car/routes/random/';">
+                    <button class="panel-item endpoint-button" onclick="window.open('/autonomous-car/routes/random/', '_blank');">
                         Go To Endpoint
                         <i class="fas fa-mouse-pointer medium-icon"></i>
                     </button>

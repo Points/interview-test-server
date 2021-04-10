@@ -118,12 +118,10 @@ pre {
     background-color: #42C8F3;
     border: none;
     color: white;
-    padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+    font-size: 20px;
     cursor: pointer;
     transition-duration: 0.4s;
     height: 65px;
@@ -208,6 +206,12 @@ pre {
     margin-top: 20px;
 }
 
+.tab {
+    width: 95%;
+    margin-left: 25px;
+    height: 450px;
+}
+
 /* Colours */
 .points-old-color-background { background-color: #6BCFF6;}
 .points-old-color-text { color: #6BCFF6;}
@@ -220,6 +224,41 @@ pre {
 
 .points-grey-background { background-color: #636366;}
 .points-grey-text { color: #636366;}
+
+/* Style tab links */
+.tablink {
+    background-color: #636366;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 20px;
+    width: 25%;
+}
+
+.tablink:hover {
+    background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+    background-color: #42C8F3;
+    color: #636366;
+    display: none;
+    padding-top: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    width: 100%;
+    border-style: solid;
+    border-color: #42C8F3;
+}
+
+.tabcontent a, .tabcontent a:visited {
+    color: #ED1651;
+}
 
 
 /* Making the website more response */
