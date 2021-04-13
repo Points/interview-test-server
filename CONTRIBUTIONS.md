@@ -4,9 +4,13 @@ If you'd like to contribute, please submit a Pull Request to this repo.
 
 ## New Assignments
 
-For new assignments, please add a new folder under [api](https://github.com/Points/interview-test-server/tree/master/api) and keep the work isolated to there. If you wish to make improvements outside of the scope of your assignment, please submit another Pull Request.
+For new assignments, please add a new folder under [api](./api/) and keep the work isolated to there. If you wish to make improvements outside of the scope of your assignment, please submit another Pull Request. Your assignment should include:
 
-You can link the routes to your assignment at the bottom of [app.py](https://github.com/Points/interview-test-server/blob/master/app.py#L37).
+* *INSTRUCTIONS.md*: a markdown file explaining the task
+* HTML Instructions: An html page in the [templates folder](./templates/) containing similar contents to the newly created INSTRUCTIONS.md file
+* `routes.py`: A list of routes relating to this assignment. The root should contain instructions, the sub-routes should contain restful endpoints. These endpoints will be linked at the bottom of [app.py](./app.py#L40).
+
+_See the [tax calculator](./api/tax_calculator) assignment as an example implementation_
 
 ## Local Development
 
