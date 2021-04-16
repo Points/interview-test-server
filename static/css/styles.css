@@ -209,13 +209,11 @@ pre {
 .tab {
     width: 95%;
     margin-left: 25px;
-    height: 450px;
+    height: 425px;
+    background-color: #42C8F3;
 }
 
 /* Colours */
-.points-old-color-background { background-color: #6BCFF6;}
-.points-old-color-text { color: #6BCFF6;}
-
 .points-pink-background { background-color: #ED1651;}
 .points-pink-text { color: #ED1651;}
 
@@ -260,7 +258,9 @@ pre {
     color: #ED1651;
 }
 
-
+.endpoint-section {
+    padding-top: 10px;
+}
 /* Making the website more response */
 @media screen and (max-width: 1200px) {
     html, body {
