@@ -2,9 +2,11 @@
 
 The purpose is to develop an income tax calculator to help illustrate how marginal taxes work. This server is pretty simple, only returning the tax rates for a given year. You are to calculate the amount of taxes owed by inputting a yearly salary, then displaying *the rates per bracket*, *the total amount owed* and *the effective tax rates*.
 
-There are two different levels, if you complete the first one with ease, feel free to work on the next one, which returns similar information, but with weird side effects.
+_[What are marginal tax rates?](https://investinganswers.com/dictionary/m/marginal-tax-rate#:~:text=To%20calculate%20marginal%20tax%20rate,bracket%20your%20current%20income%20falls)_
 
-**Please timebox your solution to one day**
+There are two different levels, if you complete the first one with ease, feel free to work on the next one, which returns similar information, but sometimes the API will throw an error.
+
+**Please timebox your solution to about 4 hours**
 
 ### Instructions
 
@@ -13,7 +15,7 @@ There are two different levels, if you complete the first one with ease, feel fr
     * Fetches the tax rates from this API server
     * Takes a yearly salary as input
     * Calculates and displays the total taxes owed for the salary
-    * Displays the amount of taxes owed per band
+    * Displays the amount of taxes owed per bracket
     * Displays the effective rate
 
 ### Level 1
