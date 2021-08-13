@@ -38,7 +38,7 @@ Please timebox your solution to one day total.
 
 **If using a backend language**
 
-* Implement a simple yet intuitive command line interface.
+* Implement a simple yet intuitive command line interface OR create a REST api endpoint to display the information in a JSON format.
 
 **Code Formatting**
 
