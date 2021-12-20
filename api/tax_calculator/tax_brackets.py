@@ -1,6 +1,7 @@
 import os
 import json
-from flask import jsonify
+import http
+import flask
 
 
 brackets_dir = os.path.join(os.path.dirname(__file__), 'fixtures')
@@ -21,6 +22,4 @@ def get_tax_brackets(tax_year='2020'):
     try:
         return _open_config(file_with_path)
     except FileNotFoundError:
-        raise FileNotFoundError(
-            f"Tax brackets for the year '{tax_year}' were not found."
-    )
+        flask.abort(http.HTTPStatus.NOT_FOUND)
