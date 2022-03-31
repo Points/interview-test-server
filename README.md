@@ -20,11 +20,11 @@ Navigate to [http://localhost:5000](http://localhost:5000). You should see a bri
 
 ## Submission Instructions
 
-You can either submit your code as a zip file or send a link to a personal repository. Do not fork or submit pull requests to this repository. Please submit within a week or 2 of receipt of instructions, unless otherwise specified.
+You can either submit your code as a zip file or send a link to a personal repository. Do not fork or submit pull requests to this repository. 
 
 Please *do not fork or submit pull requests* to this repository.
 
-Please timebox your solution to one day total.
+Try to timebox your solution to 4 hours.
 
 * Implement your solution using a language agreed upon by your hiring manager.
 * Include comments where you feel that they would be helpful.
