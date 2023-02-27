@@ -16,6 +16,6 @@ def _get_brackets(tax_year):
 
 
 def test_basic_route(client): 
-  resp = client.get('/tax-calculator/brackets')
-  brackets_2021 = _get_brackets('2021')
-  assert resp.json == {'tax_brackets': brackets_2021}
+  resp = client.get('/tax-calculator/')
+  brackets = _get_brackets('2022')
+  assert resp.json == {'tax_brackets': brackets}

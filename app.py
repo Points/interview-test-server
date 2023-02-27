@@ -1,6 +1,7 @@
+import os
 import random
 import time
-from flask import Flask, jsonify, render_template
+from flask import Flask, jsonify, render_template, send_from_directory
 from flask_cors import CORS
 
 from api.error_handlers import format_error
@@ -14,6 +15,11 @@ app.jinja_env.auto_reload = True
 app.config['TEMPLATES_AUTO_RELOAD'] = True
 
 CORS(app)
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+                               'favicon.ico', mimetype='image/png')
 
 @app.errorhandler(404)
 def not_found_handler(e):
@@ -38,4 +44,3 @@ def instructions():
 
 
 from api.tax_calculator.routes import *
-from api.autonomous_car.routes import *

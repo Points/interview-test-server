@@ -21,4 +21,3 @@ export FLASK_APP=app:app
 flask run [--reload]
 # navigate to 127.0.0.1:5000
 ```
-
