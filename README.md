@@ -2,10 +2,7 @@
 
 Welcome to the Points developer take-home assignment.
 
-Your task is to build an app against a small API. [Download the docker image](#Getting-started) onto your computer and run it locally. The instructions for each assignment live at the base of the API routes, as well as in the respective *INSTRUCTIONS.md* files. You may choose one of the following tasks:
-
-* [Autonomous Car](./api/autonomous_car/INSTRUCTIONS.md)
-* [Tax Calculator](./api/tax_calculator/INSTRUCTIONS.md)
+Your task is to build an app against a small API. [Download the docker image](#Getting-started) onto your computer and run it locally. 
 
 **Please timebox your solution to one day total.**
 
@@ -38,7 +35,7 @@ Try to timebox your solution to 4 hours.
 
 **If using a backend language**
 
-* Implement a simple yet intuitive command line interface OR create a REST api endpoint to display the information in a JSON format.
+* Implement a simple yet intuitive command line interface OR create an API endpoint to display the information in a JSON format.
 
 **Code Formatting**
 

@@ -11,9 +11,10 @@ def get_unreliable_brackets(tax_year):
     naptime()
 
     # be evil
-    roulette = random.randint(1, 3)
+    roulette = random.randint(1, 4)
     print(f'Database roulette {roulette}')
     if roulette == 3:
         raise Exception("Database not found!")
 
     return get_tax_brackets(tax_year)
+    

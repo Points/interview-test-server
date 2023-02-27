@@ -16,7 +16,7 @@ def _open_config(filename):
     return json_contents
 
 
-def get_tax_brackets(tax_year='2021'):
+def get_tax_brackets(tax_year='2022'):
     filename = f'tax-brackets--{tax_year}.json'
     file_with_path = os.path.join(brackets_dir, filename)
     try:

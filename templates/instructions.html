@@ -1,14 +1,90 @@
-{% extends 'base.html' %}
-{% block main_content %}
-    <h1>Interview Test Server</h1>
-    <p>Build one of the following applications in a language agreed upon by your hiring manager.</p>
-    <p>
-        There are different levels to each assignment, level 1 being the easiest,
-        level 2 having some gotchas, etc. If you complete a level with ease, feel
-        free to jump to the next one. Please timebox your solution to 1 day max.
-    </p>
-    <ol>
-        <li><a href="/tax-calculator">Tax Calculator Assignment</a></li>
-        <li><a href="/autonomous-car">Autonomous Car Assignment</a></li>
-    </ol>
-{% endblock main_content %}
+<!doctype html>
+<html>
+<head>
+    <title>{% block title %}Interview Test Server{% endblock title %}</title>
+    <style>
+        html, body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #0098ca;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            line-height: 1.5;
+            font-size: 14px;
+        }
+        h1 {
+            font-size: 1.6rem;
+            /* font-weight: 300; */
+        }
+        h2 {
+            font-size: 1.2rem;
+        }
+        p {
+            line-height: 1.6;
+        }
+        span {
+            color: black;
+            background-color: #DCDCDC;
+            font-family:'Lucida Console', monospace;
+        }
+        .container {
+            width: 100%;
+            max-width: 760px;
+            margin: 8px auto;
+            border-radius: 16px; 
+            padding: 48px 24px;
+            background-color: #fff;
+            min-height: 100%;
+            position: relative; 
+        }
+        .points-logo {
+            position: absolute; 
+            right: 16px; 
+            top: 16px;
+        }
+        .points-logo img {
+            height: 75px;
+            width: auto; 
+        }
+        .row {
+            display: flex;
+            align-items: center;
+        }
+        table, td, th {
+            border: 1px solid #ccc; 
+            text-align: center;
+            border-collapse: collapse; 
+        }
+        td, th {
+            padding: 8px 16px; 
+        }
+        pre {
+            padding: 16px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            border: 1px solid #ccc;
+            font-weight: 500;
+            background-color: #fff;
+            border: 1px solid rgb(238, 238, 238);
+            box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 6px 0px;
+        }
+        
+    </style>
+    <style>
+    {% block styles %}
+    {% endblock styles %}
+    </style>
+</head>
+<body>
+
+    <main class='container'>
+    <picture class="points-logo">
+        <img src="https://www.points.com/static/8aec97571d166fde7620171e35b43590/a5348/Points_PG_Dark.png" alt="Points logo" />
+    </picture>
+    {% block main_content %}
+    {% include "./generated.html" %}
+    {% endblock main_content %}
+    </main>
+</body>
+</html>
