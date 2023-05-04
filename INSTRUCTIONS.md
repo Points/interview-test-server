@@ -59,7 +59,7 @@ Feel free to use the frontend application framework that you&apos;re most comfor
 | $1,234,567  | $385,587.65 |
 
 
-### Running the mock server
+### Running the API server
 
 ```bash
 docker pull ptsdocker16/interview-test-server
