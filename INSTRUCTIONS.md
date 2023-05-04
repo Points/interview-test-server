@@ -58,10 +58,22 @@ Feel free to use the frontend application framework that you&apos;re most comfor
 | $100,000    | $17,739.17  |
 | $1,234,567  | $385,587.65 |
 
+
+### Running the mock server
+
+```bash
+docker pull ptsdocker16/interview-test-server
+docker run --init -p 5000:5000 -it ptsdocker16/interview-test-server
+```
+
+Navigate to http://localhost:5000. You should see a brief set of instructions. From there you'll be able to query the above endpoints and do your assignment. If you have any problems or need any sort of clarification, email the Team Lead or Engineering Hiring Manager for assistance.
+
+
 ### Sample Request
 
 Please find a sample request at [/tax-calculator/](http://localhost:5000/tax-calculator/), 
 which contains a reliable API endpoint and can be used for test and development purposes. 
+
 It returns the following JSON response: 
 
 
