@@ -3,7 +3,7 @@ import os
 
 ROOT_DIR = os.path.dirname(__file__)
 
-with open(os.path.join(ROOT_DIR, 'INSTRUCTIONS.md'), 'r') as f:
+with open(os.path.join(ROOT_DIR, 'README.md'), 'r') as f:
     text = f.read()
     html = markdown.markdown(text, extensions=['tables', 'fenced_code'])
 
