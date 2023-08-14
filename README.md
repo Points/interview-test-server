@@ -118,12 +118,12 @@ docker pull ptsdocker16/interview-test-server
 docker run --init -p 5000:5000 -it ptsdocker16/interview-test-server
 ```
 
-Navigate to [http://localhost:5000](http://localhost:5000). You should be greeted with this set of instructions, and access to the different available endpoints. If you have any problems or need any sort of clarification, email the engineering hiring manager for assistance.
-
-When it is running, you can navigate to the following endpoints:
+Navigate to [http://localhost:5000](http://localhost:5000). You should be greeted with this set of instructions, and access to the different available endpoints. The following are the relevant endpoints:
 
 * You development endpoint: [/tax-calculator/](http://localhost:5000/tax-calculator/)
 * The endpoint you'll be assessed against: [/tax-calculator/tax-year/2022](/tax-calculator/tax-year/2022) 
+
+If you have any problems or need any sort of clarification, email the engineering hiring manager for assistance.
 
 ## Results submission
 
