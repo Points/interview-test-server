@@ -58,7 +58,7 @@ The application should have a very basic UI with a form that accepts two inputs:
 
 ### Sample Request
 
-Please find a sample request at [/tax-calculator/](http://localhost:5000/tax-calculator/), 
+Please find a sample request at [/tax-calculator/](http://localhost:5001/tax-calculator/), 
 which contains a reliable API endpoint and can be used for test and development purposes. 
 It returns the following JSON response: 
 
@@ -115,12 +115,12 @@ In order to run the API locally, please follow these instructions:
 
 ```bash
 docker pull ptsdocker16/interview-test-server
-docker run --init -p 5000:5000 -it ptsdocker16/interview-test-server
+docker run --init -p 5001:5001 -it ptsdocker16/interview-test-server
 ```
 
-Navigate to [http://localhost:5000](http://localhost:5000). You should be greeted with this set of instructions, and access to the different available endpoints. The following are the relevant endpoints:
+Navigate to [http://localhost:5001](http://localhost:5001). You should be greeted with this set of instructions, and access to the different available endpoints. The following are the relevant endpoints:
 
-* [/tax-calculator/](http://localhost:5000/tax-calculator/) - endpoint to develop against
+* [/tax-calculator/](http://localhost:5001/tax-calculator/) - endpoint to develop against
 * [/tax-calculator/tax-year/2022](/tax-calculator/tax-year/2022) - endpoint you'll be assessed against
 
 If you have any problems or need any sort of clarification, email the engineering hiring manager for assistance.

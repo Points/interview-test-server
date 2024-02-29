@@ -16,6 +16,6 @@ ADD . /app
 RUN pipenv install --ignore-pipfile --system --deploy
 RUN python generate-instructions.py
 
-EXPOSE 5000
+EXPOSE 5001
 
-CMD gunicorn wsgi:app -w 2 -b :5000
+CMD gunicorn wsgi:app -w 2 -b :5001

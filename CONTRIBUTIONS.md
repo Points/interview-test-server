@@ -9,5 +9,5 @@ To run it locally for development purposes, it runs like a typical flask app:
 ```python
 export FLASK_APP=app:app
 flask run [--reload]
-# navigate to 127.0.0.1:5000
+# navigate to 127.0.0.1:5001
 ```
