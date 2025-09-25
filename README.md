@@ -9,8 +9,6 @@ Your task is to build an app against a small API. You can [download the docker i
 Your task is to build an application that queries our dockerized API and displays the calculated total income tax for a given salary and tax year.
 You may refer to this resource for context [on how to calculate total income tax](https://investinganswers.com/dictionary/m/marginal-tax-rate#:~:text=To%20calculate%20marginal%20tax%20rate) using marginal tax rates.
 
-Please [see the official reference to tax brackets](https://www.canada.ca/en/financial-consumer-agency/services/financial-toolkit/taxes/taxes-2/5.html) and rates for more information.
-
 ## What we're looking for
 
 The goal of this assessment is to provide a picture of your approach to development as it relates to:
